@@ -32,7 +32,7 @@ if [ ! -r "$CHANGELOG_PATH" ]; then
 fi
 
 # Get previous date from the changelog
-PREVIOUS_DATE=$(grep '^ --' "$CHANGELOG_PATH" | head -n 2 | tail -n 1 | grep -o '  .*')
+#PREVIOUS_DATE=$(grep '^ --' "$CHANGELOG_PATH" | head -n 2 | tail -n 1 | grep -o '  .*')
 
 # Use SOURCE_DATE_EPOCH if available; otherwise, use PREVIOUS_DATE
 CURRENT_DATE=$(date -u -d "@${SOURCE_DATE_EPOCH:-$PREVIOUS_DATE}" +"%Y-%m-%d %H:%M:%S")
